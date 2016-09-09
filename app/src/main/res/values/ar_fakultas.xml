@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fakultas">
+        <item> Fakultas Ekonomi </item>
+        <item> Fakultas Teknik dan Desain </item>
+        <item> Fakultas Psikologi </item>
+        <item> Fakultas Pariwisata </item>
+    </string-array>
+</resources>

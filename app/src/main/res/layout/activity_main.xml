@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,8 +15,190 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="id.sch.smktelkom_mlg.tugas01.xirpl1015.pendaftaranmahasiswa.MainActivity">
 
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
     <TextView
+        android:id="@+id/textView"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Universitas Ciputra"
+        android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="30dp"
+                android:text="Creating World Class ENTREPRENEURS"
+                android:textColor="@color/abc_primary_text_material_light" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editTextNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Lengkap" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Jenis Kelamin :"
+                android:textColor="@color/bright_foreground_disabled_material_light" />
+
+            <RadioGroup
+                android:id="@+id/jeniskel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioButtonL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Laki-Laki" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Perempuan" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:paddingTop="10dp"
+                android:text="Fakultas &amp; Jurusan :"
+                android:textColor="@color/bright_foreground_disabled_material_light" />
+
+            <Spinner
+                android:id="@+id/spinnerFakultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView4"
+                android:entries="@array/fakultas" />
+
+            <Spinner
+                android:id="@+id/spinnerJurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Hari Kuliah :"
+                android:textColor="@color/bright_foreground_disabled_material_light" />
+
+
+            <CheckBox
+                android:id="@+id/checkBoxSen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:checked="false"
+                android:text="Senin" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBoxSen"
+                android:checked="false"
+                android:text="Selasa" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBoxSel"
+                android:checked="false"
+                android:text="Rabu" />
+
+            <CheckBox
+                android:id="@+id/checkBoxKam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/checkBoxRab"
+                android:checked="false"
+                android:text="Kamis" />
+
+            <CheckBox
+                android:id="@+id/checkBoxJum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:checked="false"
+                android:text="Jumat" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:checked="false"
+                android:text="Sabtu" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:checked="false"
+                android:text="Minggu" />
+
+        </LinearLayout>
 </RelativeLayout>
+</ScrollView>
