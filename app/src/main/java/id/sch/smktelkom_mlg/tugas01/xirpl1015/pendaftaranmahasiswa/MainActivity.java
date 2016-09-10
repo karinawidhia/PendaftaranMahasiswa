@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     EditText etNama, etUmur;
     RadioGroup rgJenis;
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     CheckBox cbSen, cbSel, cbRab, cbKam, cbJum, cbSab, cbMin;
     Button bOK;
-    TextView tvNama, tvUmur, tvJK, tvfk, tvjr;
+    TextView tvNama, tvUmur, tvJK, tvfk, tvjr, tvHari, tvPilih;
+    int nPilih;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
         tvJK = (TextView) findViewById(R.id.textViewJK);
         tvfk = (TextView) findViewById(R.id.textViewFakultas);
         tvjr = (TextView) findViewById(R.id.textViewJurusan);
+        tvHari = (TextView) findViewById(R.id.textViewHari);
+        tvPilih = (TextView) findViewById(R.id.textViewPilih);
+
+        cbSen.setOnCheckedChangeListener(this);
+        cbSel.setOnCheckedChangeListener(this);
+        cbRab.setOnCheckedChangeListener(this);
+        cbKam.setOnCheckedChangeListener(this);
+        cbJum.setOnCheckedChangeListener(this);
+        cbSab.setOnCheckedChangeListener(this);
+        cbMin.setOnCheckedChangeListener(this);
 
         spFakultas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -86,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 doProcess();
                 doClick();
                 doTekan();
+                doPilih();
             }
         });
     }
@@ -94,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
         if (isValid()) {
             String nama = etNama.getText().toString();
             int umur = Integer.parseInt(etUmur.getText().toString());
-            tvNama.setText("Nama Lengkap    : " + nama);
-            tvUmur.setText("Umur                : " + umur + " tahun");
+            tvNama.setText("Nama Lengkap   : " + nama);
+            tvUmur.setText("Umur                    : " + umur + " tahun");
         }
     }
 
@@ -144,7 +157,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doTekan() {
-        tvfk.setText("Fakultas              : " + spFakultas.getSelectedItem().toString());
-        tvjr.setText("Jurusan               : " + spJurusan.getSelectedItem().toString());
+        tvfk.setText("Fakultas               : " + spFakultas.getSelectedItem().toString());
+        tvjr.setText("Jurusan                : " + spJurusan.getSelectedItem().toString());
+    }
+
+    private void doPilih() {
+        String hh = "Hari Kuliah           : ";
+        int startlen = hh.length();
+        if (cbSen.isChecked()) hh += cbSen.getText() + " ";
+        if (cbSel.isChecked()) hh += cbSel.getText() + " ";
+        if (cbRab.isChecked()) hh += cbRab.getText() + " ";
+        if (cbKam.isChecked()) hh += cbKam.getText() + " ";
+        if (cbJum.isChecked()) hh += cbJum.getText() + " ";
+        if (cbSab.isChecked()) hh += cbSab.getText() + " ";
+        if (cbMin.isChecked()) hh += cbMin.getText() + " ";
+
+        if (hh.length() == startlen) hh += "Tidak ada pilihan";
+
+        tvHari.setText(hh);
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if (isChecked) nPilih += 1;
+        else nPilih -= 1;
+
+        tvPilih.setText("Hari ( " + nPilih + " terpilih )");
     }
 }

@@ -135,7 +135,7 @@
                 android:layout_below="@+id/linearLayout" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textViewPilih"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
@@ -226,6 +226,16 @@
                 android:textColor="@android:color/white" />
 
             <TextView
+                android:id="@+id/textView5"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="26dp"
+                android:text="VALIDASI DATA"
+                android:textAlignment="center"
+                android:textColor="@color/design_textinput_error_color_light" />
+
+            <TextView
                 android:id="@+id/textViewNama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -255,6 +265,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="Hasil Jurusan" />
+
+            <TextView
+                android:id="@+id/textViewHari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hasil Hari" />
 
         </LinearLayout>
     </RelativeLayout>
