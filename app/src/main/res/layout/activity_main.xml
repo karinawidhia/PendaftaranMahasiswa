@@ -43,12 +43,13 @@
             <TextView
                 android:id="@+id/textView2"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView"
                 android:layout_centerHorizontal="true"
                 android:paddingBottom="30dp"
                 android:text="Creating World Class ENTREPRENEURS"
+                android:textAlignment="center"
                 android:textColor="@color/abc_primary_text_material_light" />
 
             <android.support.design.widget.TextInputLayout
@@ -63,11 +64,24 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editTextUmur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Umur"
+                    android:inputType="numberSigned" />
+
+            </android.support.design.widget.TextInputLayout>
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:text="Jenis Kelamin :"
                 android:textColor="@color/bright_foreground_disabled_material_light" />
 
@@ -99,7 +113,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/linearLayout"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:text="Fakultas &amp; Jurusan :"
                 android:textColor="@color/bright_foreground_disabled_material_light" />
 
@@ -124,7 +138,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:paddingTop="15dp"
                 android:text="Hari Kuliah :"
                 android:textColor="@color/bright_foreground_disabled_material_light" />
 
@@ -199,6 +213,49 @@
                 android:checked="false"
                 android:text="Minggu" />
 
+            <Button
+                android:id="@+id/buttonOK"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bgbtn"
+                android:text="OK"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textViewNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                tools:text="Hasil Nama" />
+
+            <TextView
+                android:id="@+id/textViewUmur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hasil Umur" />
+
+            <TextView
+                android:id="@+id/textViewJK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hasil Jenis Kelamin" />
+
+            <TextView
+                android:id="@+id/textViewFakultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hasil Fakultas" />
+
+            <TextView
+                android:id="@+id/textViewJurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Hasil Jurusan" />
+
         </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
 </ScrollView>
