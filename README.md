@@ -26,10 +26,10 @@ Dan menampilkan hasil untuk validasi data yang sudah diinputkan.
 
 
 
-[GitHub](https://github.com/karinawidhia/PendaftaranMahasiswa/blob/9a00bad193de2a572acf63a4e81d4de992484797/app-debug.apk)
+[Link Apk yang diupload di GitHub](https://github.com/karinawidhia/PendaftaranMahasiswa/blob/9a00bad193de2a572acf63a4e81d4de992484797/app-debug.apk)
 
 
-[GitHub](https://drive.google.com/open?id=0B4FQu99xsYM8cnZDVUFzckgybWM)
+[Link Apk yang diupload di Google Drive](https://drive.google.com/open?id=0B4FQu99xsYM8cnZDVUFzckgybWM)
 
 
 **Karina Widhia Nugrahini, XI RPL 1, 15, 4733/1452.070, SMK Telkom Malang**
